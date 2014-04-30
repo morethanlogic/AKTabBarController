@@ -123,4 +123,8 @@
 // Refresh the Tab Bar
 - (void)loadTabs;
 
+// Enable / Disable Methods
+- (void)enableTabs;
+- (void)disableTabs;
+
 @end

@@ -355,6 +355,22 @@ typedef enum {
     [self hideTabBar:AKShowHideFromRight animated:animated];
 }
 
+#pragma mark - Enable / Disable Methods
+
+- (void)enableTabs {
+    for (AKTab *tab in tabBar.tabs) {
+        [tab setEnabled:YES];
+        [tab setAlpha:1.0f];
+    }
+}
+
+- (void)disableTabs {
+    for (AKTab *tab in tabBar.tabs) {
+        [tab setEnabled:NO];
+        [tab setAlpha:0.5f];
+    }
+}
+
 #pragma mark - Required Protocol Method
 
 - (void)tabBar:(AKTabBar *)AKTabBarDelegate didSelectTabAtIndex:(NSInteger)index
