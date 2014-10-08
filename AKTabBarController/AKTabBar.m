@@ -79,6 +79,8 @@ static int kTopEdgeWidth   = 1;
         [_selectedTab setSelected:NO];
         _selectedTab = selectedTab;
         [_selectedTab setSelected:YES];
+        
+        [self setNeedsDisplay];
     }
 }
 
